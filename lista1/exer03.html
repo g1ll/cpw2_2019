@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Lista 1 - Exercício 3</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript">
+            window.onload = main;
+            function main() {
+                var a = prompt("Informe o valor para A:");
+                var b = prompt("Informe o valor para B:");
+                var c = prompt("Informe o valor para C:");
+                a = parseFloat(a);
+                b = parseFloat(b);
+                c = parseFloat(c);
+                var resultado = document.getElementById('resultado');
+                resultado.innerHTML = '<ul style="list-style:none"><li>a) <b>Área do Triângulo : </b>' + ((a * b) / 2).toFixed(2)+"</li>"+
+                                        '<li>b) <b>Área do Quadrado : </b>' + (b * b).toFixed(2)+'</li>'+
+                                        '<li>c) <b>Área do Retângulo : </b>' + (a * b).toFixed(2)+'</li>'+
+                                        '<li>d) <b>Área do Círculo : </b>' + (Math.PI * Math.pow(c, 2)).toFixed(3)+'</li></ul>';
+            }
+
+        </script>
+    </head>
+    <body>
+        <p>Escreva um algoritmo que lê três valores (A, B e C) e calcule:</p>
+            <ul style="list-style:none">
+                <li>a) a área de um triângulo que tem A por base e B por altura;</li>
+                <li>b) a área do quadrado de lado B.</li>
+                <li>c) a área do retângulo de lados A e B;</li>
+                <li>d) a área do círculo de raio C;</li>
+            </ul>
+        <div id="resultado"></div>
+    </body>
+</html>

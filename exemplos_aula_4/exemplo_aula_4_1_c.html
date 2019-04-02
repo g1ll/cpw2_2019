@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exemplo Aula 4</title>
+        <meta charset='utf-8'>
+    </head>
+    <body>
+<h3>Digite o seu nome:</h3>
+<input type='text' id="myInput"  name='nome' />
+<button>Mostrar</button>
+<p id="info"></p>
+<script type='text/javascript'>
+    //Seletor CSS
+    var botao = document.querySelector('button');
+    botao.addEventListener('click',myFunction,false);
+    function myFunction() {
+        var input = document.getElementById("myInput");
+        //Seletor CSS
+        var info = document.querySelector("#info");
+        info.innerHTML = "Olá " + input.value + "!";
+        alert(info.innerHTML);
+        botao.removeEventListener('click',myFunction);
+    }
+</script>
+
+    </body>
+</html>

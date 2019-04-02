@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lista 1 - Exercício 10</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-widtvale h, initial-scale=1.0">
+        <style>
+            body{
+                width: 60%;
+                margin: 5% auto;
+            }
+            p{
+                width: 80%;
+                margin: inherit;
+            }
+            div{
+                width: 50%;
+                margin: inherit;
+            }
+        </style>
+        <script type="text/javascript">
+            window.onload = main;
+            function main() {
+                var tc = 60;
+                var td = 20;
+                var ptc = prompt("Informe o percentual de Reprovados da Turma C: ");
+                var ptd = prompt("Informe o percentual de Aprovados da Turma D: ");
+                ptc = parseFloat(ptc);
+                ptd = parseFloat(ptd);
+                var a = tc * ptc / 100;
+                var b = td - td * ptd / 100;
+                var c = (a + b) * 100 / (td + tc);
+                var resultado = document.getElementById('resultado');
+                resultado.innerHTML = '<br>a) Reprovados na Turma C  : ' + a +
+                                      '<br>b) Reprovados na Turma D :' + b +
+                                      '<br>c) Percentual de reprovados no total :' + c;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Lista 1 - Exerício 10</h1>
+        <p>A turma C é composta de 60 alunos, e a turma D de 20 alunos. Escreva um algoritmo que leia o
+            percentual de alunos reprovados na turma C, o percentual de aprovados na turma D, calcule e
+            escreva:</p>
+        <ol style="list-style:lower-alpha">
+            <li>A quantidade de alunos reprovados na turma C.</li>
+            <li>A quantidade de alunos reprovados na turma D.</li>
+            <li>A percentagem de alunos reprovados em relação ao total de alunos das duas turmas.</li>
+        </ol>
+        <div id="resultado"></div>
+    </body>
+</html>

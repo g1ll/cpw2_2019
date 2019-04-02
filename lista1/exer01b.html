@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Lista 1 - Exercício 1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+		<h1>Resultado:</h1>
+		<div id='resultado'></div>
+		 <script type="text/javascript">
+            var n = parseFloat(prompt("Digite um numero:"));			
+			for(var i = n-1;i>1;i--){
+				n *= i;
+			}
+			
+			//document.write(n);
+			var div = document.getElementById('resultado');
+			div.innerHTML = "<i>"+n+"</i>";			
+			console.log(div.innerText);
+			console.log(div.innerHTML);
+        </script>
+    </body>
+</html>

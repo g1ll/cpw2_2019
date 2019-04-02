@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lista 1 - Exercício 6</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-widtvale h, initial-scale=1.0">
+        <style>
+            body{
+                width: 60%;
+                margin: 5% auto;
+            }
+            p{
+                width: 80%;
+                margin: inherit;
+            }
+            div{
+                width: 50%;
+                margin: inherit;
+            }
+        </style>
+        <script type="text/javascript">
+            window.onload = main;
+            function main() {
+                var tf = prompt("Informe a temperatura em Fahrenheit");
+                tf = parseFloat(tf);
+                var tc = (tf-32)/9*5;
+                var resultado = document.getElementById('resultado');
+                resultado.innerHTML = '<br>Temperatura em Fahrenheit  : '+tf+' Fº'+
+                                      '<br><b>Temperatura em Celsius  : '+tc+' Cº</b>';
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Lista 1 - Exerício 6</h1>
+        <p>Escreva um algoritmo para ler uma temperatura em graus Fahrenheit, calcular e escrever o valor
+correspondente em graus Celsius.</p>
+        <div id="resultado"></div>
+    </body>
+</html>

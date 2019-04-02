@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lista 1 - Exercício 12</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-widtvale h, initial-scale=1.0">
+        <style>
+            body{
+                width: 60%;
+                margin: 5% auto;
+            }
+            p{
+                width: 80%;
+                margin: inherit;
+            }
+            div{
+                width: 50%;
+                margin: inherit;
+            }
+        </style>
+        <script type="text/javascript">
+            window.onload = main;
+            function main() {
+                var acre = 0.5;//acrescimo
+				var com = 0.15;//comissao
+                var nemp = prompt("Informe o número de empregados: ");
+                var salmin = prompt("Informe o valor do salário mínimo: ");
+                var pcbike = prompt("Informe o preço de custo das bikes: ");
+                var tbikeven = prompt("Informe o total de bikes vendidas: ");
+                nemp = parseFloat(nemp);
+                salmin = parseFloat(salmin);
+                pcbike = parseFloat(pcbike);
+                tbikeven = parseFloat(tbikeven);
+                var sf = 2*salmin + pcbike*0.15*tbikeven/nemp;
+                var lc = (pcbike*0.5+pcbike)*tbikeven - sf*nemp - pcbike*tbikeven;
+                var resultado = document.getElementById('resultado');
+                resultado.innerHTML = '<br>Número de empregados: ' + nemp +
+                                      '<br>Valor do salário mínimo: R$ ' + salmin +
+                                      '<br>Preço de custo das bikes : R$ ' + pcbike + 
+                                      '<br>Total de bikes vendidas:  ' + tbikeven +
+                                      '<br><b>Sálario dos empregados : R$ ' + sf +
+                                      '<br><b>Lucro líquido da Loja : R$ ' + lc+'</b>';
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Lista 1 - Exerício 12</h1>
+        <p>Uma loja vende bicicletas com um acréscimo de 50 % sobre o seu preço de custo. Ela paga a
+cada vendedor 2 salários mínimos mensais, mais uma comissão de 15 % sobre o preço de custo de
+cada bicicleta vendida, dividida igualmente entre eles. Escreva um algoritmo que leia o número de
+empregados da loja, o valor do salário mínimo, o preço de custo de cada bicicleta, o número de
+bicicletas vendidas, calcule e escreva: O salário final de cada empregado e o lucro (líquido) da loja.</p>
+        <div id="resultado"></div>
+    </body>
+</html>

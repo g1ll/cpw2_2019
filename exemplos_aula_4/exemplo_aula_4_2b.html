@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exemplo Aula 3</title>
+        <meta charset='utf-8'>
+        <script type='text/javascript'>
+function myFunction(e) {
+
+     //inpede a submissão do formulário,
+    //      ou seja recarregar a página
+    e.preventDefault(); 
+
+    var nome = myform.nome.value;
+    //var nome = document.getElementById('nome').value;
+
+    var pagamento = myform.pag.value;
+    
+    var opcoes = Array.from(myform.opcoes);
+    var itens =''; 
+    opcoes.forEach(function(item){
+        if(item.checked)
+            itens+='<br>'+item.value;
+    }); 
+    
+    var produtos = myform.prod.value;
+//    var select = myform.prod.value;
+//    var options = Array.from(select.selectedOptions);
+//    options.forEach(function(option){
+//        produtos +='<br>'+option.value;
+//    });   
+    
+    
+    var info = document.getElementById("info");
+    info.innerHTML='';
+
+    info.innerHTML = "<h3>Parabéns "+nome+"! Sua compra foi efetuada!</h3>";
+    info.innerHTML +="<h4>Produtos : </h4>"+produtos;
+    info.innerHTML += "<h4>Forma de pagamento: </h4>"+pagamento;
+    info.innerHTML += "<h4>Itens opcionais: </h4>"+itens;
+
+}
+        </script>
+    </head>
+    <body>
+
+        <h3>Confirmar comprar:</h3>
+        <form onsubmit="myFunction(event)" name="myform">
+            Nome:<input type="text" name="nome" id="nome">
+            <h4>Produtos:</h4>
+            <select name="prod" size="4">
+                <option>SmartWatch</option>
+                <option>Notebook</option>
+                <option>SmartPhone</option>
+                <option>SmartTV</option>
+            </select>
+            <br>
+            <h4>Forma de Pagamento e Opcionais:</h4>
+            <br><input type="radio" name="pag" value='débito'>Débito
+            <br><input type="radio" name="pag" value='crédito'>Crédito
+            <br><input type="checkbox" name="opcoes" value='Entrega Rápida'>Entrega Rápida
+            <br><input type="checkbox" name="opcoes" value='Garantia Estendida'>Garantia Estendida
+            <br><input type='submit' value='Mostrar' >
+        </form>
+
+        <p id="info"></p>
+
+    </body>
+</html>

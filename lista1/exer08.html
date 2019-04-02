@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lista 1 - Exercício 8</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-widtvale h, initial-scale=1.0">
+        <style>
+            body{
+                width: 60%;
+                margin: 5% auto;
+            }
+            p{
+                width: 80%;
+                margin: inherit;
+            }
+            div{
+                width: 50%;
+                margin: inherit;
+            }
+        </style>
+        <script type="text/javascript">
+            window.onload = main;
+            function main() {
+                var cc = prompt("Informe o comprimento: ");
+                var lc = prompt("Informe a largura: ");
+                var ac = prompt("Informe a altura: ");
+                cc = parseFloat(cc);
+                lc = parseFloat(lc);
+                ac = parseFloat(ac);
+                var at = 2*lc*ac + 2*cc*ac;
+                var qtdc = at/1.5;
+                var resultado = document.getElementById('resultado');
+                resultado.innerHTML = '<br>Comprimento : '+cc+' m'+
+                                      '<br>Largura  : '+lc+' m'+
+                                      '<br>Altura  : '+ac+' m'+
+                                      '<br>Área Total: '+at+' m²'+
+                                      '<br><b>Quantidade de caixas  : '+qtdc+' u</b>';
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Lista 1 - Exerício 8</h1>
+        <p>Escreva um algoritmo para ler as dimensões de uma cozinha retangular (comprimento, largura e
+altura), calcular e escrever a quantidade de caixas de azulejos para se colocar em todas as suas
+paredes (considere que não será descontado a área ocupada por portas e janelas). Cada caixa de
+azulejos possui 1,5 m²</p>
+        <div id="resultado"></div>
+    </body>
+</html>

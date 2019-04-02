@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       
+        <title>Exemplo Aula 4</title>
+        <meta charset='utf-8'>
+<script type='text/javascript'>
+    function myFunction() {
+        var input = document.getElementById("myInput");
+        var info = document.getElementById("info");
+        info.innerHTML = "Olá "+input.value+"!";
+        alert(info.innerHTML);
+    }
+</script>
+    </head>
+    <body>
+        <h3>Digite o seu nome:</h3>
+        <input type='text' id="myInput"  name='nome' />
+        <button onclick="myFunction()">Mostrar</button>
+        <p id="info"></p>
+    </body>
+</html>

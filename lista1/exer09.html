@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lista 1 - Exercício 9</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-widtvale h, initial-scale=1.0">
+        <style>
+            body{
+                width: 60%;
+                margin: 5% auto;
+            }
+            p{
+                width: 80%;
+                margin: inherit;
+            }
+            div{
+                width: 50%;
+                margin: inherit;
+            }
+        </style>
+        <script type="text/javascript">
+            window.onload = main;
+            function main() {
+                var te = prompt("Informe a quantidade total de eleitores: ");
+                var vb = prompt("Informe a quantidade de votos Brancos: ");
+                var vn = prompt("Informe a quantidade de votos Nulos: ");
+                var vv = prompt("Informe a quantidade de votos Válidos: ");
+                te = parseFloat(te);
+                vb = parseFloat(vb);
+                vn = parseFloat(vn);
+                vv = parseFloat(vv);
+                var pvb = vb*100/te;
+                var pvn = vn*100/te;
+                var pvv = vv*100/te;
+                var resultado = document.getElementById('resultado');
+                resultado.innerHTML = '<br>Percentual de votos Brancos : '+pvb+'%'+
+                                      '<br>Percentual de votos Nulos :'+pvn+'%'+
+                                      '<br>Percentual de votos Válidos :'+pvv+'%';
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Lista 1 - Exerício 9</h1>
+        <p>Escreva um algoritmo para ler o número de eleitores de um município, o número de votos
+brancos, nulos e válidos. Calcular e escrever o percentual que cada um representa em relação ao
+total de eleitores.</p>
+        <div id="resultado"></div>
+    </body>
+</html>

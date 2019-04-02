@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lista 1 - Exercício 13</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-widtvale h, initial-scale=1.0">
+        <style>
+            body{
+                width: 60%;
+                margin: 5% auto;
+            }
+            p{
+                width: 80%;
+                margin: inherit;
+            }
+            div{
+                width: 50%;
+                margin: inherit;
+            }
+        </style>
+        <script type="text/javascript">
+            window.onload = main;
+            function main() {
+                var cpista = prompt("Informe o comprimento da pista m: ");
+                var laps = prompt("Informe o número de voltas: ");
+                var qtdr = prompt("Informe o  número de reabastecimentos: ");
+                var cons = prompt("Informe o consumo do carro: ");
+                cpista = parseFloat(cpista);
+                laps = parseFloat(laps);
+                qtdr = parseFloat(qtdr);
+                cons = parseFloat(cons);
+                var minl = cpista/1000*laps/cons/(qtdr+1);
+                var resultado = document.getElementById('resultado');
+                resultado.innerHTML = '<br>Comprimento da pista: ' + cpista + ' m'+
+                                      '<br>Número de voltas: ' + laps +
+                                      '<br>Número de reabastecimentos:  ' + qtdr + 
+                                      '<br>Consumo do carro:  ' + cons + ' Km/L'+
+                                      '<br><b>Mínimo de Litros : ' + minl+' L</b>';
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Lista 1 - Exerício 13</h1>
+        <p>A equipe Ferrari deseja calcular o número mínimo de litros que deverá colocar no tanque de
+seu carro para que ele possa percorrer um determinado número de voltas até o primeiro
+reabastecimento. Escreva um algoritmo que leia o comprimento da pista (em metros), o número
+total de voltas a serem percorridas no grande prêmio, o número de reabastecimentos desejados, e o
+consumo de combustível do carro (em Km/L). Calcular e escrever o número mínimo de litros
+necessários para percorrer até o primeiro reabastecimento.</p>
+<p>OBS: Considere que o número de voltas entre os reabastecimentos é o mesmo.</p>
+        <div id="resultado"></div>
+    </body>
+</html>

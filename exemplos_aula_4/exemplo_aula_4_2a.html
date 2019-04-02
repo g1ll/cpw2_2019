@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exemplo Aula 3</title>
+<meta charset='utf-8'>
+<script type='text/javascript'>
+function myFunction() {
+    var select = document.getElementById("mySelect");
+	var info =  document.getElementById("info");
+	info.innerHTML = '';
+        var lista = "<ul>";
+	if(select.selectedOptions.length>0){
+		for(var i=0;i<select.selectedOptions.length;i++){
+			lista += '<li>'+select.selectedOptions[i].value+'</li>';
+		}
+                info.innerHTML = lista+"</ul>";
+    }
+}
+</script>
+</head>
+<body>
+
+<h3>Escolha uma Fruta:</h3>
+
+<select id="mySelect" size="4" multiple='multiple'>
+	  <option>Apple</option>
+	  <option>Pear</option>
+	  <option>Banana</option>
+	  <option>Orange</option>
+	</select>
+<br>
+<button onclick="myFunction()">Mostrar</button>
+
+<p id="info"></p>
+
+</body>
+</html>

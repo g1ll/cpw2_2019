@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Lista 1 - Exercício 5</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-widtvale h, initial-scale=1.0">
+        <style>
+            body{
+                width: 60%;
+                margin: 5% auto;
+            }
+            p{
+                width: 80%;
+                margin: inherit;
+            }
+            div{
+                width: 50%;
+                margin: inherit;
+            }
+        </style>
+        <script type="text/javascript">
+            window.onload = main;
+            function main() {
+                var sm = prompt("Informe o salário mensal:");
+                var pr = prompt("Informe o percentual de reajuste:");
+                sm = parseFloat(sm);
+                pr = parseFloat(pr);
+                var sf = sm+sm*pr/100;
+                var resultado = document.getElementById('resultado');
+                resultado.innerHTML = '<br>Salário Mensal  : '+sm+
+                                      '<br>Percentual de Reajuste  : '+pr+
+									  '<br><b>Salário Final: </b> R$ '+sf;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Lista 1 - Exerício 5</h1>
+        <p>Escreva um algoritmo para ler o salário mensal e o percentual de reajuste. Calcular e escrever o
+valor do novo salário.</p>
+        <div id="resultado"></div>
+    </body>
+</html>

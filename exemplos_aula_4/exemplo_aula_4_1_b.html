@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exemplo Aula 3</title>
+<meta charset='utf-8'>
+<script type='text/javascript'>
+function myFunction() {
+    var input = document.getElementById("myInput");
+	var info =  document.getElementById("info")
+    info.innerHTML = input.value;
+}
+function mostraEscrevendo(){
+	 var input = document.getElementById("myInput");
+	var info =  document.getElementById("info")
+    info.innerHTML = input.value;
+}
+</script>
+</head>
+<body>
+
+<h3>Digite o seu nome:</h3>
+
+<input type='text' id="myInput"  onchange='mostraEscrevendo()' onkeydown='mostraEscrevendo()' onkeyup='mostraEscrevendo()' name='nome' />
+<button onclick="myFunction()">Mostrar</button>
+
+<p id="info"></p>
+
+</body>
+</html>

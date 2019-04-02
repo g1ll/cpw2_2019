@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Lista 1 - Exercício 4</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-widtvale h, initial-scale=1.0">
+        <style>
+            body{
+                width: 60%;
+                margin: 5% auto;
+            }
+            p{
+                width: 80%;
+                margin: inherit;
+            }
+            div{
+                width: 50%;
+                margin: inherit;
+            }
+        </style>
+        <script type="text/javascript">
+            window.onload = main;
+            function main() {
+                var ht = prompt("Informe a quantidade de horas trabalhadas:");
+                var vh = prompt("Informe o valor por hora:");
+                var qt_f = prompt("Informe a quantidade de filhos:");
+                ht = parseFloat(ht);
+                vh = parseFloat(vh);
+                qt_f= parseFloat(qt_f);
+                var resultado = document.getElementById('resultado');
+                resultado.innerHTML = '<br>Total de Horas  : '+ht+
+                                      '<br>Valor por Hora  : '+vh+
+                                      '<br>Filhos menores de 14 anos  : '+qt_f+
+                        '<br><b>Salário Final: </b>'+((ht*vh)+(qt_f*((ht*vh)*0.02)));
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Lista 1 - Exerício 4</h1>
+        <p>Escreva um algoritmo que lê a quantidade de horas trabalhadas em um mês, o valor que recebe 
+por hora, o número de filhos com idade menor que 14 anos e calcule e imprima o salário desse 
+funcionário. Suponha que para cada filho menor de 14 anos haja um adicional de 2% no salário.</p>
+        <div id="resultado"></div>
+    </body>
+</html>

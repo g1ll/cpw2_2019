@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lista 1 - Exercício 11</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-widtvale h, initial-scale=1.0">
+        <style>
+            body{
+                width: 60%;
+                margin: 5% auto;
+            }
+            p{
+                width: 80%;
+                margin: inherit;
+            }
+            div{
+                width: 50%;
+                margin: inherit;
+            }
+        </style>
+        <script type="text/javascript">
+            window.onload = main;
+            function main() {
+                var prc = 2.5;//preço do litro de gasolina
+                var moi = prompt("Informe a marcação inicial do odômetro (Km): ");
+                var mof = prompt("Informe a marcação final do odômetro (Km): ");
+                var lg = prompt("Informe o combustível consumido (L): ");
+                var rd = prompt("Informe a renda do dia (R$): ");
+                moi = parseFloat(moi);
+                mof = parseFloat(mof);
+                lg = parseFloat(lg);
+                rd = parseFloat(rd);
+                var md = (mof-moi)/lg;
+                var lc = rd - lg*prc;
+                var resultado = document.getElementById('resultado');
+                resultado.innerHTML = '<br>Marcação inicial do odômetro : ' + moi + ' Km'+
+                                      '<br>Marcação final do odômetro  : ' + mof + ' Km'+
+                                      '<br>Consumo de conbustível  : ' + lg + ' L'+
+                                      '<br>Renda arrecadada no dia : R$ ' + rd +
+                                      '<br><b>Média de consumo em Km/L  : ' + md + ' Km/L </b>'+
+                                      '<br><b>Lucro líquido do dia : R$ ' + lc+'</b>';
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Lista 1 - Exerício 11</h1>
+        <p>Um motorista de taxi deseja calcular o rendimento de seu carro na praça. Sabendo­se que o
+preço do combustível é de R$ 2,50 , escreva um algoritmo para ler: a marcação do odômetro (Km)
+no início do dia, a marcação (Km) no final do dia, o número de litros de combustível gasto e o valor
+total (R$) recebido dos passageiros. Calcular e escrever: a média do consumo em Km/L e o lucro
+(líquido) do dia.</p>
+        <div id="resultado"></div>
+    </body>
+</html>

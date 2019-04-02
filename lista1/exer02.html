@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lista 1 - Exercício 2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			div{border: solid 1px blue};
+		</style>
+       
+    </head>
+    <body>
+        <p>Escreva um algoritmo que lê três números, calcule a média aritmética, harmônica e geométrica e 
+            escreva os números lidos e as médias calculadas.</p>
+        <div id="resultado"></div>
+		 <script type="text/javascript">
+           
+                var num1 = prompt("Informe um valor:");
+                var num2 = prompt("Informe outro valor:");
+                var num3 = prompt("Informe outro valor:");
+                num1 = parseFloat(num1);
+                num2 = parseFloat(num2);
+                num3 = parseFloat(num3);
+                var resultado = document.getElementById('resultado');
+                resultado.innerHTML = '<br><b>Média Aritmética : '+(num1+num2+num3)/3+'</b>';
+                resultado.innerHTML += '<br><b>Média Harmônica : </b>'+3/(1/num1+1/num2+1/num3);
+                resultado.innerHTML += '<br><b>Média Geométrica : </b>'+Math.cbrt(num1+num2+num3);
+         
+        </script>
+	</body>
+</html>
